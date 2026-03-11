@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Letters I Never Sent — Stylesheet
+   ========================================================================== */
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.85;
+  color: #2a2118;
+  background: #f6f0e4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Site wrapper */
+.site {
+  background: #f6f0e4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.site-branding {
+  flex: 1;
+}
+
+.site-title {
+  font-family: "EB Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1c1712;
+  line-height: 1.3;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-description {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a8872;
+  font-style: normal;
+  margin-top: 0.2rem;
+}
+
+/* Stamp */
+.stamp {
+  width: 68px;
+  height: 82px;
+  border: 1.5px solid #9a8872;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transform: rotate(5deg);
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed #9a8872;
+}
+
+.stamp-inner {
+  font-family: "Caveat", cursive;
+  font-size: 0.48rem;
+  text-align: center;
+  color: #9a8872;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+.site-main {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex: 1;
+}
+
+/* ==========================================================================
+   Letter Articles
+   ========================================================================== */
+
+.letter {
+  padding: 3rem 0;
+}
+
+.letter-date {
+  font-family: "Caveat", cursive;
+  font-size: 0.9rem;
+  color: #9a8872;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.letter-title {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  color: #1c1712;
+  margin-bottom: 1.2rem;
+}
+
+/* Salutation — first paragraph's italic */
+.letter-body > p:first-child em {
+  color: #9a8872;
+}
+
+/* Body paragraphs */
+.letter-body p {
+  margin-bottom: 1.5rem;
+}
+
+.letter-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Signature */
+.letter-sign {
+  font-family: "Caveat", cursive;
+  font-size: 1.1rem;
+  color: #9a8872;
+  margin-top: 1.6rem;
+  display: block;
+}
+
+/* Archive note */
+.archive-note {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.archive-note a {
+  font-family: "Caveat", cursive;
+  font-size: 1rem;
+  color: #7a6c5a;
+  text-decoration: none;
+}
+
+.archive-note a:hover {
+  color: #8c4a2f;
+}
+
+.archive-empty {
+  padding: 3rem 0;
+  color: #7a6c5a;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-footer a {
+  font-family: "Caveat", cursive;
+  font-size: 0.9rem;
+  color: #9a8872;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #8c4a2f;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header,
+  .site-main,
+  .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .site-title {
+    font-size: 1.35rem;
+  }
+
+  .stamp {
+    width: 56px;
+    height: 68px;
+    margin-left: 1rem;
+  }
+
+  .stamp-inner {
+    font-size: 0.4rem;
+  }
+
+  .letter {
+    padding: 2.5rem 0;
+  }
+}
